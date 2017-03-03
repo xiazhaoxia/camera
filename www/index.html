@@ -5,19 +5,45 @@
         <meta http-equiv="Content-type" content="text/html; charset=utf-8">
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" src="js/attachmentupload.js"></script>       
-
+        <link rel="stylesheet" type="text/css" href="css/index.css">
     </head>
-    <body style="padding-top:50px">
-        <button style="font-size:23px;" onclick="getPhoto(pictureSource.PHOTOLIBRARY);">
-            photo library
-        </button><br>
-         <br>
-    
-       
+    <body>
+        <ul>
+            <li><input type="button" onclick="pickImages();" value="pickimages"/></li>
+            <li><input type="button" onclick="gotoServer();" value="weilele"/></li>
 
-        <button style="font-size:23px;" onclick="getPhoto(pictureSource.CAMERA);">take a photo and upload</button> <br>
-         <br>
-         <button style="font-size:23px;" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">saved photo album</button> <br>
-           <img style="display:none;" id="largeImage" src="" width="300px" />
+            <li><input type="button" onclick="local();" value="local server"/></li>
+        </ul>
+        
+
+
+
+           <script>            
+                function pickImages(){
+                     document.addEventListener("deviceready",function(){
+                            alert("ready");
+                          window.imagePicker.getPictures(
+                            function(results) {
+                                for (var i = 0; i < results.length; i++) {
+                                    console.log('Image URI: ' + results[i]);
+                                }
+                            }, function (error) {
+                                console.log('Error: ' + error);
+                            }
+                        );
+
+                     },false);
+                }  
+
+                function gotoServer(){
+                   window.location.href="http://www.microlele.com/clone/" ;
+                }
+
+                function local(){
+                    window.location.href="http://www.suxia.com/wordpress/userblog/";
+                }
+                      
+            
+           </script>
     </body>
 </html>

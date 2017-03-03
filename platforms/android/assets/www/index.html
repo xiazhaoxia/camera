@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Capture Photo</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" src="js/attachmentupload.js"></script>       
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+    </head>
+    <body>
+        <ul>
+            <li><input type="button" onclick="pickImages();" value="pickimages"/></li>
+            <li><input type="button" onclick="gotoServer();" value="weilele"/></li>
+
+            <li><input type="button" onclick="local();" value="local server"/></li>
+        </ul>
+        
+
+
+
+           <script>            
+                function pickImages(){
+                     document.addEventListener("deviceready",function(){
+                            alert("ready");
+                          window.imagePicker.getPictures(
+                            function(results) {
+                                for (var i = 0; i < results.length; i++) {
+                                    console.log('Image URI: ' + results[i]);
+                                }
+                            }, function (error) {
+                                console.log('Error: ' + error);
+                            }
+                        );
+
+                     },false);
+                }  
+
+                function gotoServer(){
+                   window.location.href="http://www.microlele.com/clone/" ;
+                }
+
+                function local(){
+                    window.location.href="http://192.168.1.106/wordpress/userblog/";
+                }
+                      
+            
+           </script>
+    </body>
+</html>

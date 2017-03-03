@@ -27,9 +27,9 @@ function onPhotoURISuccess(imageURI) {
     //打印出照片路径
     alert(imageURI);
     //显示照片
-    var largeImage = document.getElementById('largeImage');
+    /*var largeImage = document.getElementById('largeImage');
     largeImage.style.display = 'block';
-    largeImage.src = imageURI;
+    largeImage.src = imageURI;*/
 
     copyFile(imageURI);
 }
@@ -67,7 +67,7 @@ function upload(fileURL) {
 
 
 
-var fileURL = cordova.file.applicationDirectory+"www/img/logo.png";
+
 
 //if user in the offline mode ,using copyFile replace the upload
 function copyFile(fileURL){ 
