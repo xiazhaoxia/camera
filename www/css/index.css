@@ -118,3 +118,9 @@ input{
     height:50px;
     width:200px;
 }
+
+.menulink{
+    display: block;
+    height: 40px;
+    width: 100px;
+}

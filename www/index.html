@@ -12,37 +12,25 @@
             <li><input type="button" onclick="pickImages();" value="pickimages"/></li>
             <li><input type="button" onclick="gotoServer();" value="weilele"/></li>
 
-            <li><input type="button" onclick="local();" value="local server"/></li>
+            <li><input type="button" onclick="local();" value="blade server"/></li>
+
+            <li><a href="menu.html" class="menulink">菜单展示</a></li>
         </ul>
         
 
 
 
            <script>            
-                function pickImages(){
-                     document.addEventListener("deviceready",function(){
-                            alert("ready");
-                          window.imagePicker.getPictures(
-                            function(results) {
-                                for (var i = 0; i < results.length; i++) {
-                                    console.log('Image URI: ' + results[i]);
-                                }
-                            }, function (error) {
-                                console.log('Error: ' + error);
-                            }
-                        );
-
-                     },false);
-                }  
+                        
 
                 function gotoServer(){
-                   window.location.href="http://www.microlele.com/clone/" ;
+                   window.location.href="http://www.microlele.com/dev/" 
                 }
 
                 function local(){
-                    window.location.href="http://www.suxia.com/wordpress/userblog/";
+                    window.location.href="http://slc10yvj.us.oracle.com/epharmam_enu/index.html"
                 }
-                      
+
             
            </script>
     </body>
