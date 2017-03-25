@@ -63,6 +63,20 @@ $(function(){
      
     }  
 
+    //adding special class to body
+    function init(){
+        //add body class 
+        var $path=window.location.pathname;
+        var $routeArray=$path.split("/");
+        if($routeArray.length==5){
+            $("body").addClass($routeArray[4]);
+        }else if($routeArray.length==3){
+            $("body").addClass("home");
+        }
+    }
+
+    init();
+
 
 });
 
