@@ -6,9 +6,9 @@ $(function(){
 
 
     var $menu= $("#nav-bar-filter");
-    $menu.on("touchstart", touchStart);  
-    $menu.on("touchmove", touchMove);  
-    $menu.on("touchend", touchEnd);  
+    $header.on("touchstart", touchStart);  
+    $header.on("touchmove", touchMove);  
+    $header.on("touchend", touchEnd);  
 
 
  

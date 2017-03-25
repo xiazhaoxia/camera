@@ -6,9 +6,9 @@ $(function(){
 
 
     var $menu= $("#nav-bar-filter");
-    $menu.on("touchstart", touchStart);  
-    $menu.on("touchmove", touchMove);  
-    $menu.on("touchend", touchEnd);  
+    $header.on("touchstart", touchStart);  
+    $header.on("touchmove", touchMove);  
+    $header.on("touchend", touchEnd);  
 
 
  
@@ -53,12 +53,14 @@ $(function(){
             } 
             console.log("swiptleft:" +swiptleft+"startX:" +startX +";endX:"+endX+";distance:"+distance);
 
-            $menu.animate({
-                left:swiptleft},0);  
+            $menu.animate({left:swiptleft},0);  
         }
     }  
     function touchEnd(event) {  
-       console.log(event);
+       //console.log(event);
+       var touch = event.originalEvent.changedTouches[0];
+       endX = touch.pageX;  
+     
     }  
 
 
